@@ -1,0 +1,160 @@
+:root {
+  /* Accent */
+  --dashboard: #0a84ff;
+  --calendar: #5e5ce6;
+  --lessons: #bf5af2;
+  --homework: #ff9f0a;
+  --attendance: #30d158;
+  --ranking: #ff375f;
+  --alerts: #ff453a;
+
+  /* Light Background */
+  --app-bg-primary: #eef1f6;
+  --app-bg-blob-1: #d9e6ff;
+  --app-bg-blob-2: #e7dcfb;
+  --app-bg-blob-3: #d7f3ee;
+
+  /* Text */
+  --app-text-primary: #0c0c12;
+  --app-text-secondary: #55566b;
+  --app-text-muted: #9092a6;
+
+  /* Glass */
+  --app-glass: rgba(255, 255, 255, 0.55);
+  --app-glass-strong: rgba(255, 255, 255, 0.74);
+
+  --app-border-strong: rgba(255, 255, 255, 0.85);
+  --app-border-soft: rgba(255, 255, 255, 0.4);
+  --app-border-line: rgba(120, 120, 150, 0.14);
+  /* Shadow */
+  --app-shadow-soft:
+    0 1px 1px rgba(20, 20, 40, 0.03), 0 8px 24px -8px rgba(30, 30, 70, 0.14),
+    0 24px 48px -24px rgba(30, 30, 70, 0.16);
+
+  --app-shadow-lift:
+    0 2px 2px rgba(20, 20, 40, 0.04), 0 16px 32px -12px rgba(30, 30, 70, 0.22),
+    0 32px 64px -28px rgba(30, 30, 70, 0.26);
+}
+
+.dark {
+  --app-bg-primary: #06060b;
+  --app-bg-blob-1: #101c36;
+  --app-bg-blob-2: #1a1230;
+  --app-bg-blob-3: #0e1f22;
+
+  --app-text-primary: #f5f5fa;
+  --app-text-secondary: #a9aabc;
+  --app-text-muted: #6e6f82;
+
+  --app-glass: rgba(40, 40, 54, 0.46);
+  --app-glass-strong: rgba(48, 48, 64, 0.66);
+
+  --app-border-strong: rgba(255, 255, 255, 0.14);
+  --app-border-soft: rgba(255, 255, 255, 0.07);
+  --app-border-line: rgba(255, 255, 255, 0.08);
+
+  --app-shadow-soft:
+    0 1px 1px rgba(0, 0, 0, 0.3), 0 8px 24px -8px rgba(0, 0, 0, 0.5);
+
+  --app-shadow-lift:
+    0 2px 2px rgba(0, 0, 0, 0.4), 0 16px 32px -12px rgba(0, 0, 0, 0.6);
+}
+.app-link {
+  background: linear-gradient(135deg, rgba(10,132,255,.16), rgba(94,92,230,.12));
+  color: #0A84FF
+}
+.app-theme {
+  background-color: var(--app-bg-primary);
+}
+.app-border-line {
+  border: 1px solid var(--app-border-line);
+}
+.app-border-soft {
+  border: 1px solid var(--app-border-soft);
+}
+.app-border-strong {
+  border: 1px solid var(--app-border-strong);
+}
+.app-text-primary {
+  color: var(--app-text-primary);
+}
+.app-text-secondary {
+  color: var(--app-text-secondary);
+}
+.app-text-muted {
+  color: var(--app-text-muted);
+}
+
+.dashboard {
+  background: var(--dashboard);
+}
+.dashboard-text {
+  color: var(--dashboard);
+}
+.calendar {
+  color: var(--calendar);
+}
+.lessons {
+  background-color: var(--lessons);
+}
+.lessons-text {
+  color: var(--lessons);
+}
+.homework {
+  background: var(--homework);
+}
+.homework-text {
+  color: var(--homework);
+}
+.attendance {
+  background: var(--attendance);
+}
+.attendance-text {
+  color: var(--attendance);
+}
+.ranking {
+  background: var(--ranking);
+}
+.ranking-text {
+  color: var(--ranking);
+}
+.alerts {
+  background: var(--alerts);
+}
+.alerts-text {
+  color: var(--alerts);
+}
+.input-theme:focus {
+  border: 1px solid var(--dashboard);
+}
+.app-glass {
+  background: var(--app-glass);
+  backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid var(--app-border-soft);
+  box-shadow: var(--app-shadow-soft);
+}
+
+.app-glass-medium {
+  background: var(--app-glass);
+  backdrop-filter: blur(26px) saturate(180%);
+  border: 1px solid var(--app-border-soft);
+}
+
+.app-glass-strong {
+  background: var(--app-glass-strong);
+  backdrop-filter: blur(34px) saturate(180%);
+  border: 1px solid var(--app-border-strong);
+  box-shadow: var(--app-shadow-lift);
+}
+
+.bg-blobs {
+  background:
+    radial-gradient(circle at top left, var(--app-bg-blob-1), transparent 35%),
+    radial-gradient(circle at top right, var(--app-bg-blob-2), transparent 35%),
+    radial-gradient(
+      circle at bottom left,
+      var(--app-bg-blob-3),
+      transparent 35%
+    ),
+    var(--app-bg-primary);
+}
