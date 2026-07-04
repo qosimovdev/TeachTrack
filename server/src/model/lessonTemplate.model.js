@@ -33,7 +33,7 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false,
             },
             theory: {
-                type: DataTypes.TEXT,
+                type: DataTypes.TEXT("long"),
                 allowNull: false,
             },
             examples: {
@@ -49,29 +49,48 @@ module.exports = (sequelize, DataTypes) => {
                 defaultValue: [],
             },
             homeworkTemplate: {
-                type: DataTypes.TEXT,
-                allowNull: true,
+                type: DataTypes.JSON,
+                defaultValue: [],
             },
             estimatedDuration: {
                 type: DataTypes.INTEGER,
-                allowNull: false,
                 defaultValue: 120,
             },
             difficulty: {
-                type: DataTypes.ENUM("BEGINNER", "INTERMEDIATE", "ADVANCED"),
+                type: DataTypes.ENUM(
+                    "BEGINNER",
+                    "INTERMEDIATE",
+                    "ADVANCED"
+                ),
                 defaultValue: "BEGINNER",
             },
             resources: {
                 type: DataTypes.JSON,
                 defaultValue: [],
             },
+            attachments: {
+                type: DataTypes.JSON,
+                defaultValue: [],
+            },
+            videoUrl: {
+                type: DataTypes.STRING,
+                allowNull: true,
+            },
+            sourceCodeUrl: {
+                type: DataTypes.STRING,
+                allowNull: true,
+            },
             tags: {
                 type: DataTypes.JSON,
                 defaultValue: [],
             },
-            isPublished: {
-                type: DataTypes.BOOLEAN,
-                defaultValue: true,
+            status: {
+                type: DataTypes.ENUM(
+                    "DRAFT",
+                    "PUBLISHED",
+                    "ARCHIVED"
+                ),
+                defaultValue: "PUBLISHED",
             },
         },
         {

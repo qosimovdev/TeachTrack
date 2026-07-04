@@ -8,15 +8,31 @@ module.exports = (sequelize, DataTypes) => {
                 autoIncrement: true,
             },
             type: {
-                type: DataTypes.ENUM("HTML", "CSS", "JavaScript", "React", "Node.js"),
+                type: DataTypes.STRING,
                 allowNull: false,
+                unique: true,
             },
             title: {
                 type: DataTypes.STRING,
-                allowNull: true
+                allowNull: false,
+            },
+            description: {
+                type: DataTypes.TEXT,
+                allowNull: true,
+            },
+            totalLessons: {
+                type: DataTypes.INTEGER,
+                allowNull: false,
+                defaultValue: 0,
+            },
+            status: {
+                type: DataTypes.ENUM("ACTIVE", "INACTIVE"),
+                defaultValue: "ACTIVE",
             },
         },
-        { timestamps: true, }
+        {
+            timestamps: true,
+        }
     );
 
     return CourseTemplate;

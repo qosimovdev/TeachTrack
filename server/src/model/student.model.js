@@ -20,6 +20,14 @@ module.exports = (sequelize, DataTypes) => {
                 type: DataTypes.STRING,
                 allowNull: false
             },
+            username: {
+                type: DataTypes.STRING,
+                allowNull: false
+            },
+            mustChangePassword: {
+                type: DataTypes.BOOLEAN,
+                defaultValue: true,
+            },
             groupId: {
                 type: DataTypes.INTEGER,
                 allowNull: false

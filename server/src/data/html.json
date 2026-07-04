@@ -1,0 +1,2015 @@
+[
+    {
+        "order": 1,
+        "title": "HTML nima?",
+        "slug": "html-introduction",
+        "topic": "HTML asoslari va web qanday ishlaydi",
+        "objective": "O'quvchi HTML nima ekanligini, browser va server qanday ishlashini hamda birinchi HTML hujjatini yaratishni o'rganadi.",
+        "theory": "HTML (HyperText Markup Language) web sahifalarning tuzilishini yaratish uchun ishlatiladigan belgilash tilidir. HTML dasturlash tili emas. U browserga sahifadagi elementlarning qanday joylashishini ko'rsatadi. Har qanday web sayt HTML, CSS va JavaScript yordamida yaratiladi. HTML - skelet, CSS - dizayn, JavaScript esa funksionallik beradi.\n\nWeb qanday ishlaydi?\n1. Foydalanuvchi browserga sayt manzilini yozadi.\n2. Browser serverga so'rov yuboradi.\n3. Server HTML faylni qaytaradi.\n4. Browser HTML ni o'qib sahifani ekranga chiqaradi.\n\nHTML hujjati DOCTYPE bilan boshlanadi. Keyin html, head va body teglari yoziladi. Head qismida sahifa haqida ma'lumotlar bo'ladi. Body qismida esa foydalanuvchi ko'radigan barcha elementlar joylashadi.\n\nBest Practice:\n- Har doim HTML5 ishlating.\n- Teglarni kichik harflarda yozing.\n- Kodni to'g'ri indentatsiya qiling.\n- Har bir elementni maqsadiga mos ishlating.\n\nCommon mistakes:\n- DOCTYPE yozmaslik.\n- Body tashqarisiga element yozish.\n- Teglarni yopmaslik.\n- HTML ni dasturlash tili deb o'ylash.",
+        "courseTemplateId": 1,
+        "examples": [
+            {
+                "title": "Birinchi HTML hujjati",
+                "description": "Minimal HTML5 hujjati",
+                "code": "<!DOCTYPE html>\n<html>\n<head>\n<title>Mening sahifam</title>\n</head>\n<body>\n<h1>Assalomu alaykum</h1>\n<p>Bu mening birinchi web sahifam.</p>\n</body>\n</html>"
+            },
+            {
+                "title": "Heading",
+                "description": "Sarlavha chiqarish",
+                "code": "<h1>HTML kursiga xush kelibsiz</h1>"
+            },
+            {
+                "title": "Paragraph",
+                "description": "Oddiy matn",
+                "code": "<p>HTML o'rganishni boshladik.</p>"
+            },
+            {
+                "title": "Heading va Paragraph",
+                "description": "Bir nechta element",
+                "code": "<h2>Men haqimda</h2>\n<p>Ismim Ibrohim.</p>"
+            },
+            {
+                "title": "Line Break",
+                "description": "Qator tashlash",
+                "code": "Toshkent<br>O'zbekiston"
+            }
+        ],
+        "practiceTasks": [
+            {
+                "title": "1-vazifa",
+                "description": "index.html fayli yarating."
+            },
+            {
+                "title": "2-vazifa",
+                "description": "Ismingizni h1 tegi ichida yozing."
+            },
+            {
+                "title": "3-vazifa",
+                "description": "O'zingiz haqingizda 3 ta paragraph yozing."
+            },
+            {
+                "title": "4-vazifa",
+                "description": "2 ta heading va 2 ta paragraph ishlating."
+            },
+            {
+                "title": "5-vazifa",
+                "description": "Faylni browserda ochib natijani tekshiring."
+            }
+        ],
+        "quizQuestions": [
+            {
+                "question": "HTML nimaning qisqartmasi?",
+                "options": [
+                    "HyperText Markup Language",
+                    "Hyper Tool Markup Language",
+                    "Home Tool Markup Language",
+                    "Hyper Transfer Machine Language"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "HTML qanday til?",
+                "options": [
+                    "Markup Language",
+                    "Programming Language",
+                    "Database",
+                    "Framework"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "HTML5 hujjati qaysi qatordan boshlanadi?",
+                "options": [
+                    "<!DOCTYPE html>",
+                    "<html>",
+                    "<body>",
+                    "<head>"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Foydalanuvchi ko'radigan qism qaysi teg ichida joylashadi?",
+                "options": [
+                    "<body>",
+                    "<head>",
+                    "<meta>",
+                    "<title>"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Web sahifaning skeleti qaysi texnologiya?",
+                "options": [
+                    "HTML",
+                    "CSS",
+                    "JavaScript",
+                    "SQL"
+                ],
+                "answer": 0
+            }
+        ],
+        "homeworkTemplate": "O'zingiz haqingizda oddiy web sahifa yarating. Unda h1, h2, p va br teglaridan foydalaning.",
+        "estimatedDuration": 120,
+        "difficulty": "BEGINNER",
+        "resources": [
+            {
+                "title": "MDN HTML",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+            },
+            {
+                "title": "W3Schools HTML",
+                "url": "https://www.w3schools.com/html/"
+            },
+            {
+                "title": "WHATWG HTML",
+                "url": "https://html.spec.whatwg.org/"
+            }
+        ],
+        "tags": [
+            "html",
+            "beginner",
+            "introduction",
+            "browser",
+            "web"
+        ],
+        "isPublished": true
+    },
+    {
+        "order": 2,
+        "title": "HTML Document Structure",
+        "slug": "html-document-structure",
+        "topic": "HTML hujjatining tuzilishi",
+        "objective": "O'quvchi HTML hujjatining asosiy qismlarini, ularning vazifalarini va HTML5 standartiga mos sahifa yaratishni o'rganadi.",
+        "theory": "Har bir HTML hujjati ma'lum bir tuzilishga ega bo'ladi. Brauzer HTML faylni to'g'ri o'qishi uchun hujjat standart bo'yicha yozilishi kerak. HTML5 hujjati doimo <!DOCTYPE html> qatori bilan boshlanadi. Bu browserga hujjat HTML5 ekanligini bildiradi.\n\n<html> tegi hujjatning ildiz elementi hisoblanadi. Barcha boshqa elementlar uning ichida joylashadi.\n\n<head> qismida foydalanuvchi ko'rmaydigan ma'lumotlar saqlanadi. Masalan: sahifa nomi (title), meta ma'lumotlar, CSS ulanishlari, favicon va boshqa xizmat ma'lumotlari.\n\n<body> qismida esa foydalanuvchi browser oynasida ko'radigan barcha elementlar joylashadi. Masalan: sarlavha, matn, rasm, tugmalar, jadvallar va formalar.\n\nKodni yozishda toza va tartibli yozish juda muhim. Har bir ichki element 4 ta probel yoki bitta tab bilan ichkariga surib yoziladi (indentation). Bu kodni o'qishni osonlashtiradi.\n\nBest Practice:\n- Har doim <!DOCTYPE html> bilan boshlang.\n- lang atributini yozing.\n- title yozishni unutmang.\n- Kodni tartibli yozing.\n- body ichiga faqat ko'rinadigan elementlarni yozing.\n\nCommon Mistakes:\n- DOCTYPE ni unutish.\n- head va body ni almashtirib yuborish.\n- title yozmaslik.\n- html tegini yopmaslik.",
+        "courseTemplateId": 1,
+        "examples": [
+            {
+                "title": "Minimal HTML5",
+                "description": "Standart HTML5 hujjati",
+                "code": "<!DOCTYPE html>\n<html lang=\"uz\">\n<head>\n<title>Bosh sahifa</title>\n</head>\n<body>\n</body>\n</html>"
+            },
+            {
+                "title": "Title ishlatish",
+                "description": "Brauzer oynasidagi nom",
+                "code": "<title>Mening Portfolio Saytim</title>"
+            },
+            {
+                "title": "Head qismi",
+                "description": "Head ichidagi elementlar",
+                "code": "<head>\n<meta charset=\"UTF-8\">\n<title>HTML Darsi</title>\n</head>"
+            },
+            {
+                "title": "Body qismi",
+                "description": "Ko'rinadigan kontent",
+                "code": "<body>\n<h1>Salom Dunyo</h1>\n<p>Bu body qismi.</p>\n</body>"
+            },
+            {
+                "title": "To'liq HTML hujjati",
+                "description": "Professional yozilish usuli",
+                "code": "<!DOCTYPE html>\n<html lang=\"uz\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Mening Saytim</title>\n</head>\n<body>\n<h1>Xush kelibsiz!</h1>\n<p>Bu HTML5 hujjati.</p>\n</body>\n</html>"
+            }
+        ],
+        "practiceTasks": [
+            {
+                "title": "Minimal HTML",
+                "description": "Standart HTML5 hujjatini yarating."
+            },
+            {
+                "title": "Title",
+                "description": "Sahifa nomini o'zgartiring."
+            },
+            {
+                "title": "Head",
+                "description": "Head ichiga charset va title qo'shing."
+            },
+            {
+                "title": "Body",
+                "description": "Body ichiga h1 va p yozing."
+            },
+            {
+                "title": "Indentation",
+                "description": "Kodni toza formatda yozing."
+            }
+        ],
+        "quizQuestions": [
+            {
+                "question": "HTML5 hujjati qaysi qatordan boshlanadi?",
+                "options": [
+                    "<!DOCTYPE html>",
+                    "<html>",
+                    "<head>",
+                    "<body>"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "HTML hujjatining ildiz elementi qaysi?",
+                "options": [
+                    "<html>",
+                    "<body>",
+                    "<head>",
+                    "<root>"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Foydalanuvchi ko'radigan ma'lumot qayerda joylashadi?",
+                "options": [
+                    "<body>",
+                    "<head>",
+                    "<title>",
+                    "<meta>"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Brauzer oynasidagi nom qaysi teg orqali yoziladi?",
+                "options": [
+                    "<title>",
+                    "<meta>",
+                    "<head>",
+                    "<h1>"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "lang=\"uz\" nima uchun ishlatiladi?",
+                "options": [
+                    "Sahifa tilini ko'rsatadi",
+                    "Rang beradi",
+                    "Shriftni o'zgartiradi",
+                    "Rasm chiqaradi"
+                ],
+                "answer": 0
+            }
+        ],
+        "homeworkTemplate": "O'zingiz haqingizda HTML5 standartiga mos sahifa yarating. Unda DOCTYPE, html, head, title va body teglari to'g'ri ishlatilgan bo'lsin.",
+        "estimatedDuration": 120,
+        "difficulty": "BEGINNER",
+        "resources": [
+            {
+                "title": "MDN HTML Structure",
+                "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content"
+            },
+            {
+                "title": "W3Schools HTML",
+                "url": "https://www.w3schools.com/html/"
+            },
+            {
+                "title": "HTML Living Standard",
+                "url": "https://html.spec.whatwg.org/"
+            }
+        ],
+        "tags": [
+            "html",
+            "document",
+            "structure",
+            "doctype",
+            "head",
+            "body"
+        ],
+        "isPublished": true
+    },
+    {
+        "order": 3,
+        "title": "HTML Heading (Sarlavhalar)",
+        "slug": "html-headings",
+        "topic": "HTML Heading teglari",
+        "objective": "O'quvchi HTML dagi h1 dan h6 gacha bo'lgan heading teglari vazifasini, ularning SEO va Accessibility uchun ahamiyatini hamda to'g'ri ishlatilishini o'rganadi.",
+        "theory": "Heading (sarlavha) teglari web sahifadagi matnlarni tartiblash va muhimligini belgilash uchun ishlatiladi. HTML da jami 6 ta heading mavjud: h1, h2, h3, h4, h5 va h6. h1 eng muhim va eng katta sarlavha hisoblanadi, h6 esa eng kichik darajadagi sarlavhadir. Odatda har bir sahifada faqat bitta h1 ishlatiladi. Chunki qidiruv tizimlari (Google) va ekran o'quvchi dasturlar h1 ni sahifaning asosiy mavzusi deb qabul qiladi. Qolgan headinglar esa bo'lim va bo'limchalarga ajratish uchun ishlatiladi. Headinglarni faqat matnni kattalashtirish uchun ishlatish noto'g'ri. Agar matnni kattalashtirish kerak bo'lsa, CSS ishlatiladi. Headinglar sahifaning semantik tuzilishini yaratadi va SEO uchun juda muhim hisoblanadi.",
+        "courseTemplateId": 1,
+        "examples": [
+            {
+                "title": "Asosiy Heading",
+                "description": "Sahifaning asosiy sarlavhasi",
+                "code": "<h1>Frontend Dasturlash Kursi</h1>"
+            },
+            {
+                "title": "Bo'limlar",
+                "description": "H2 ishlatilishi",
+                "code": "<h2>HTML</h2>\n<h2>CSS</h2>\n<h2>JavaScript</h2>"
+            },
+            {
+                "title": "Ichki bo'lim",
+                "description": "H3 ishlatilishi",
+                "code": "<h2>HTML</h2>\n<h3>Heading</h3>\n<h3>Paragraph</h3>"
+            },
+            {
+                "title": "Barcha Headinglar",
+                "description": "h1 dan h6 gacha",
+                "code": "<h1>H1</h1>\n<h2>H2</h2>\n<h3>H3</h3>\n<h4>H4</h4>\n<h5>H5</h5>\n<h6>H6</h6>"
+            },
+            {
+                "title": "Portfolio misoli",
+                "description": "Portfolio sahifasida headinglar",
+                "code": "<h1>Ibrohim Qosimov</h1>\n<h2>Men haqimda</h2>\n<h2>Loyihalar</h2>\n<h3>CRM System</h3>\n<h3>Portfolio</h3>"
+            }
+        ],
+        "practiceTasks": [
+            {
+                "title": "Headinglar",
+                "description": "h1 dan h6 gacha barcha headinglarni yozing."
+            },
+            {
+                "title": "Portfolio",
+                "description": "Portfolio sahifasi uchun h1 va h2 ishlating."
+            },
+            {
+                "title": "Kurs sahifasi",
+                "description": "Frontend kursi uchun headinglar yarating."
+            },
+            {
+                "title": "Blog",
+                "description": "Blog maqolasi uchun headinglar yozing."
+            },
+            {
+                "title": "SEO",
+                "description": "Sahifada faqat bitta h1 ishlating."
+            }
+        ],
+        "quizQuestions": [
+            {
+                "question": "Eng muhim heading qaysi?",
+                "options": [
+                    "<h1>",
+                    "<h2>",
+                    "<h3>",
+                    "<h6>"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "HTML da nechta heading mavjud?",
+                "options": [
+                    "6",
+                    "5",
+                    "7",
+                    "8"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Bir sahifada odatda nechta h1 ishlatiladi?",
+                "options": [
+                    "1",
+                    "2",
+                    "5",
+                    "Cheklanmagan"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Headinglarning asosiy vazifasi nima?",
+                "options": [
+                    "Sahifani strukturaga ajratish",
+                    "Matn rangini o'zgartirish",
+                    "Rasm chiqarish",
+                    "Video qo'shish"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Matnni kattalashtirish uchun nima ishlatiladi?",
+                "options": [
+                    "CSS",
+                    "Heading",
+                    "JavaScript",
+                    "Table"
+                ],
+                "answer": 0
+            }
+        ],
+        "homeworkTemplate": "Shaxsiy portfolio sahifasi yarating. Unda 1 ta h1, kamida 3 ta h2 va 4 ta h3 ishlating.",
+        "estimatedDuration": 120,
+        "difficulty": "BEGINNER",
+        "resources": [
+            {
+                "title": "MDN Headings",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements"
+            },
+            {
+                "title": "W3Schools Headings",
+                "url": "https://www.w3schools.com/html/html_headings.asp"
+            },
+            {
+                "title": "HTML Standard",
+                "url": "https://html.spec.whatwg.org/"
+            }
+        ],
+        "tags": [
+            "heading",
+            "h1",
+            "h2",
+            "seo",
+            "html",
+            "beginner"
+        ],
+        "isPublished": true
+    },
+    {
+        "order": 4,
+        "title": "HTML Paragraph (Matnlar)",
+        "slug": "html-paragraphs",
+        "topic": "Paragraph tegi va matn yozish qoidalari",
+        "objective": "O'quvchi HTML da matn yozish, paragraph (<p>) tegi, qator tashlash (<br>), gorizontal chiziq (<hr>) va matnlarni to'g'ri formatlashni o'rganadi.",
+        "theory": "Paragraph (<p>) tegi HTML da oddiy matn yozish uchun ishlatiladi. Har bir <p> tegi avtomatik ravishda yangi qatordan boshlanadi va pastidan ozgina bo'sh joy qoldiradi. Brauzer bir nechta bo'sh joylarni yoki Enter tugmasini bitta bo'sh joy sifatida qabul qiladi. Agar yangi qatorga o'tish kerak bo'lsa <br> tegi ishlatiladi. Bo'limlarni ajratish uchun <hr> tegi ishlatiladi. HTML faqat matnning tuzilishini belgilaydi, uning ko'rinishini esa CSS boshqaradi. Paragraphlarni kichik bo'limlarga ajratib yozish foydalanuvchi uchun o'qishni osonlashtiradi. Juda uzun matnlarni bitta paragraph ichida yozish tavsiya etilmaydi. Har bir fikr alohida paragraph bo'lishi kerak.",
+        "courseTemplateId": 1,
+        "examples": [
+            {
+                "title": "Oddiy paragraph",
+                "description": "Matn yozish",
+                "code": "<p>Bu mening birinchi paragraphim.</p>"
+            },
+            {
+                "title": "Ikki paragraph",
+                "description": "Bir nechta matn",
+                "code": "<p>HTML o'rganmoqdaman.</p>\n<p>Keyingi dars CSS bo'ladi.</p>"
+            },
+            {
+                "title": "Qator tashlash",
+                "description": "br tegi",
+                "code": "<p>Toshkent<br>O'zbekiston</p>"
+            },
+            {
+                "title": "Gorizontal chiziq",
+                "description": "hr tegi",
+                "code": "<p>Birinchi bo'lim</p>\n<hr>\n<p>Ikkinchi bo'lim</p>"
+            },
+            {
+                "title": "Portfolio matni",
+                "description": "Haqingizda yozish",
+                "code": "<h2>Men haqimda</h2>\n<p>Men Full Stack dasturchiman va zamonaviy web ilovalar yarataman.</p>"
+            }
+        ],
+        "practiceTasks": [
+            {
+                "title": "Paragraph",
+                "description": "O'zingiz haqingizda bitta paragraph yozing."
+            },
+            {
+                "title": "Ikki matn",
+                "description": "Kamida 2 ta paragraph yarating."
+            },
+            {
+                "title": "Manzil",
+                "description": "br tegi yordamida manzilingizni yozing."
+            },
+            {
+                "title": "Bo'lim",
+                "description": "hr tegi yordamida ikki bo'limni ajrating."
+            },
+            {
+                "title": "Portfolio",
+                "description": "Portfolio sahifangiz uchun 'Men haqimda' bo'limini yarating."
+            }
+        ],
+        "quizQuestions": [
+            {
+                "question": "Oddiy matn yozish uchun qaysi teg ishlatiladi?",
+                "options": [
+                    "<p>",
+                    "<h1>",
+                    "<span>",
+                    "<div>"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Yangi qatorga o'tish uchun qaysi teg ishlatiladi?",
+                "options": [
+                    "<br>",
+                    "<hr>",
+                    "<p>",
+                    "<pre>"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Gorizontal chiziq chizuvchi teg qaysi?",
+                "options": [
+                    "<hr>",
+                    "<br>",
+                    "<line>",
+                    "<p>"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Brauzer ketma-ket bo'sh joylarni qanday qabul qiladi?",
+                "options": [
+                    "Bitta bo'sh joy",
+                    "Hammasini saqlaydi",
+                    "Xato beradi",
+                    "Qator tashlaydi"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Paragraphning asosiy vazifasi nima?",
+                "options": [
+                    "Matn yozish",
+                    "Rasm chiqarish",
+                    "Jadval yaratish",
+                    "Video qo'shish"
+                ],
+                "answer": 0
+            }
+        ],
+        "homeworkTemplate": "Shaxsiy portfolio sahifangiz uchun 'Men haqimda' bo'limini yarating. Unda kamida 3 ta paragraph, 2 ta br va 1 ta hr tegi ishlating.",
+        "estimatedDuration": 120,
+        "difficulty": "BEGINNER",
+        "resources": [
+            {
+                "title": "MDN Paragraph",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/p"
+            },
+            {
+                "title": "MDN br",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/br"
+            },
+            {
+                "title": "W3Schools Paragraph",
+                "url": "https://www.w3schools.com/html/html_paragraphs.asp"
+            }
+        ],
+        "tags": [
+            "paragraph",
+            "p",
+            "br",
+            "hr",
+            "html",
+            "text"
+        ],
+        "isPublished": true
+    },
+    {
+        "order": 5,
+        "title": "HTML Text Formatting",
+        "slug": "html-text-formatting",
+        "topic": "Matnni formatlash teglari",
+        "objective": "O'quvchi HTML da matnni qalin, kursiv, belgilangan, kichik, o'chirilgan va boshqa formatlarda chiqarishni o'rganadi.",
+        "theory": "HTML da matnni chiroyli va ma'noli ko'rinishda chiqarish uchun turli formatting teglari mavjud. Bu teglar matnning ko'rinishini yoki ma'nosini o'zgartiradi. Masalan <b> matnni qalin qiladi, <strong> esa matnning muhimligini bildiradi. Ularning ko'rinishi o'xshash bo'lishi mumkin, ammo semantik jihatdan farq qiladi. Xuddi shuningdek <i> va <em> ham bir-biriga o'xshaydi, lekin <em> urg'u berilgan matnni anglatadi. <mark> matnni sariq rang bilan belgilaydi. <small> kichik matn chiqaradi. <del> o'chirilgan matnni, <ins> yangi qo'shilgan matnni, <sub> pastki indeksni va <sup> yuqori indeksni ifodalaydi. Semantik teglardan foydalanish Accessibility va SEO uchun foydalidir.",
+        "courseTemplateId": 1,
+        "examples": [
+            {
+                "title": "Qalin matn",
+                "description": "b va strong",
+                "code": "<b>Qalin matn</b>\n<strong>Muhim matn</strong>"
+            },
+            {
+                "title": "Kursiv",
+                "description": "i va em",
+                "code": "<i>Kursiv</i>\n<em>Urg'u berilgan matn</em>"
+            },
+            {
+                "title": "Belgilang",
+                "description": "mark",
+                "code": "<p>Bugungi mavzu <mark>HTML</mark>.</p>"
+            },
+            {
+                "title": "O'chirilgan va yangi matn",
+                "description": "del va ins",
+                "code": "<del>100 000 so'm</del>\n<ins>80 000 so'm</ins>"
+            },
+            {
+                "title": "Indekslar",
+                "description": "sub va sup",
+                "code": "H<sub>2</sub>O<br>x<sup>2</sup>"
+            }
+        ],
+        "practiceTasks": [
+            {
+                "title": "Qalin matn",
+                "description": "Ismingizni strong yordamida yozing."
+            },
+            {
+                "title": "Urg'u",
+                "description": "Muhim so'zni em tegi bilan belgilang."
+            },
+            {
+                "title": "Narx",
+                "description": "Eski va yangi narxni del va ins orqali chiqaring."
+            },
+            {
+                "title": "Formula",
+                "description": "H2O va x² formulalarini yozing."
+            },
+            {
+                "title": "Portfolio",
+                "description": "Portfolio sahifasida muhim texnologiyalarni mark tegi bilan ajrating."
+            }
+        ],
+        "quizQuestions": [
+            {
+                "question": "Qaysi teg muhim matnni bildiradi?",
+                "options": [
+                    "<strong>",
+                    "<b>",
+                    "<i>",
+                    "<small>"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Matnni sariq rang bilan belgilash uchun qaysi teg ishlatiladi?",
+                "options": [
+                    "<mark>",
+                    "<strong>",
+                    "<em>",
+                    "<u>"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "O'chirilgan matn uchun qaysi teg ishlatiladi?",
+                "options": [
+                    "<del>",
+                    "<ins>",
+                    "<small>",
+                    "<sub>"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Yuqori indeks uchun qaysi teg ishlatiladi?",
+                "options": [
+                    "<sup>",
+                    "<sub>",
+                    "<mark>",
+                    "<em>"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Semantik jihatdan qaysi biri to'g'ri?",
+                "options": [
+                    "<strong>",
+                    "<b>",
+                    "<font>",
+                    "<center>"
+                ],
+                "answer": 0
+            }
+        ],
+        "homeworkTemplate": "Portfolio sahifasini yarating. Ismingizni strong, kasbingizni em, texnologiyalarni mark yordamida ajrating. Eski va yangi narx misolini ham qo'shing.",
+        "estimatedDuration": 120,
+        "difficulty": "BEGINNER",
+        "resources": [
+            {
+                "title": "MDN Text Formatting",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element"
+            },
+            {
+                "title": "W3Schools Formatting",
+                "url": "https://www.w3schools.com/html/html_formatting.asp"
+            },
+            {
+                "title": "HTML Living Standard",
+                "url": "https://html.spec.whatwg.org/"
+            }
+        ],
+        "tags": [
+            "formatting",
+            "strong",
+            "em",
+            "mark",
+            "sub",
+            "sup",
+            "html"
+        ],
+        "isPublished": true
+    },
+    {
+        "order": 6,
+        "title": "HTML Comments (Izohlar)",
+        "slug": "html-comments",
+        "topic": "HTML da izoh (comment) yozish",
+        "objective": "O'quvchi HTML comment nima ekanligini, qanday yozilishini va loyiha davomida commentlardan to'g'ri foydalanishni o'rganadi.",
+        "theory": "Comment (izoh) HTML kodining bir qismi bo'lib, brauzer tomonidan ekranga chiqarilmaydi. Commentlar dasturchilar uchun qo'shimcha ma'lumot yozish, kodni tushuntirish, vaqtincha kodni o'chirib turish yoki loyihani tartibli saqlash uchun ishlatiladi. HTML da comment <!-- va --> belgilarining orasiga yoziladi. Commentlarni foydalanuvchi ko'rmaydi, ammo sahifaning source kodini ochsa ko'rishi mumkin. Shuning uchun comment ichiga parol, token yoki maxfiy ma'lumotlarni yozish tavsiya etilmaydi. Katta loyihalarda commentlar kodni boshqalarga tushunarli qilishda juda katta yordam beradi.",
+        "courseTemplateId": 1,
+        "examples": [
+            {
+                "title": "Oddiy Comment",
+                "description": "HTML izohi",
+                "code": "<!-- Bu comment -->"
+            },
+            {
+                "title": "Heading uchun Comment",
+                "description": "Bo'limni ajratish",
+                "code": "<!-- Header boshlanishi -->\n<h1>Portfolio</h1>"
+            },
+            {
+                "title": "Section Comment",
+                "description": "Bo'limlarni ajratish",
+                "code": "<!-- About Section -->\n<section>\n<h2>Men haqimda</h2>\n</section>"
+            },
+            {
+                "title": "Footer Comment",
+                "description": "Footer boshlanishi",
+                "code": "<!-- Footer -->\n<footer>2026 ©</footer>"
+            },
+            {
+                "title": "Kodni vaqtincha o'chirish",
+                "description": "Comment ichiga olish",
+                "code": "<!--\n<p>Bu vaqtincha o'chirilgan paragraph.</p>\n-->"
+            }
+        ],
+        "practiceTasks": [
+            {
+                "title": "Comment yozish",
+                "description": "HTML faylingizga 5 ta comment qo'shing."
+            },
+            {
+                "title": "Header",
+                "description": "Header bo'limi boshlanishiga comment yozing."
+            },
+            {
+                "title": "About",
+                "description": "About section uchun comment yozing."
+            },
+            {
+                "title": "Footer",
+                "description": "Footer boshlanishiga comment qo'shing."
+            },
+            {
+                "title": "Kodni yashirish",
+                "description": "Bitta paragraphni comment ichiga olib vaqtincha o'chiring."
+            }
+        ],
+        "quizQuestions": [
+            {
+                "question": "HTML comment qanday yoziladi?",
+                "options": [
+                    "<!-- Comment -->",
+                    "// Comment",
+                    "/* Comment */",
+                    "# Comment"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Comment brauzerda ko'rinadimi?",
+                "options": [
+                    "Yo'q",
+                    "Ha",
+                    "Faqat Chrome da",
+                    "Faqat Firefox da"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Commentning asosiy vazifasi nima?",
+                "options": [
+                    "Kodni tushuntirish",
+                    "Rasm chiqarish",
+                    "CSS ulash",
+                    "Link yaratish"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Comment ichiga maxfiy ma'lumot yozish mumkinmi?",
+                "options": [
+                    "Yo'q",
+                    "Ha",
+                    "Faqat localhostda",
+                    "Faqat JavaScript bilan"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Katta loyihalarda comment nima uchun kerak?",
+                "options": [
+                    "Kodni tushunarli qilish uchun",
+                    "Kodni tez ishlatish uchun",
+                    "SEO uchun",
+                    "Rasm chiqarish uchun"
+                ],
+                "answer": 0
+            }
+        ],
+        "homeworkTemplate": "Portfolio sahifangizni yarating va Header, About, Skills, Projects hamda Footer bo'limlari uchun alohida comment yozing. Bitta paragraphni comment ichiga olib vaqtincha yashiring.",
+        "estimatedDuration": 60,
+        "difficulty": "BEGINNER",
+        "resources": [
+            {
+                "title": "MDN Comments",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+            },
+            {
+                "title": "W3Schools HTML Comments",
+                "url": "https://www.w3schools.com/html/html_comments.asp"
+            }
+        ],
+        "tags": [
+            "html",
+            "comment",
+            "comments",
+            "documentation",
+            "beginner"
+        ],
+        "isPublished": true
+    },
+    {
+        "order": 7,
+        "title": "HTML Lists (Ro'yxatlar)",
+        "slug": "html-lists",
+        "topic": "HTML da ro'yxatlar yaratish",
+        "objective": "O'quvchi HTML da tartibli (Ordered List), tartibsiz (Unordered List) va ta'rif (Description List) ro'yxatlarini yaratish hamda ulardan to'g'ri foydalanishni o'rganadi.",
+        "theory": "Ro'yxatlar (Lists) web sahifadagi ma'lumotlarni tartibli ko'rinishda chiqarish uchun ishlatiladi. HTML da 3 xil ro'yxat mavjud. Unordered List (<ul>) tartibsiz ro'yxat bo'lib, elementlar oldida nuqta (•) chiqadi. Ordered List (<ol>) tartibli ro'yxat bo'lib, elementlar raqamlar yoki harflar bilan tartiblanadi. Description List (<dl>) esa atama va uning izohini yozish uchun ishlatiladi. Uning ichida <dt> (Description Term) va <dd> (Description Description) teglari ishlatiladi. Har bir ro'yxat elementi <li> (List Item) tegi ichida yoziladi. Menyu, navigatsiya, texnologiyalar ro'yxati, xizmatlar va boshqa ko'plab joylarda listlardan foydalaniladi.",
+        "courseTemplateId": 1,
+        "examples": [
+            {
+                "title": "Unordered List",
+                "description": "Nuqtali ro'yxat",
+                "code": "<ul>\n  <li>HTML</li>\n  <li>CSS</li>\n  <li>JavaScript</li>\n</ul>"
+            },
+            {
+                "title": "Ordered List",
+                "description": "Raqamli ro'yxat",
+                "code": "<ol>\n  <li>HTML o'rganish</li>\n  <li>CSS o'rganish</li>\n  <li>JavaScript o'rganish</li>\n</ol>"
+            },
+            {
+                "title": "Description List",
+                "description": "Atama va izoh",
+                "code": "<dl>\n  <dt>HTML</dt>\n  <dd>Web sahifaning tuzilishini yaratadi.</dd>\n\n  <dt>CSS</dt>\n  <dd>Web sahifaga dizayn beradi.</dd>\n</dl>"
+            },
+            {
+                "title": "Ichma-ich ro'yxat",
+                "description": "Nested List",
+                "code": "<ul>\n  <li>Frontend\n    <ul>\n      <li>HTML</li>\n      <li>CSS</li>\n      <li>JavaScript</li>\n    </ul>\n  </li>\n</ul>"
+            },
+            {
+                "title": "Portfolio Skills",
+                "description": "Texnologiyalar ro'yxati",
+                "code": "<h2>Ko'nikmalar</h2>\n<ul>\n  <li>HTML5</li>\n  <li>CSS3</li>\n  <li>JavaScript</li>\n  <li>React</li>\n  <li>Node.js</li>\n</ul>"
+            }
+        ],
+        "practiceTasks": [
+            {
+                "title": "Frontend ro'yxati",
+                "description": "Frontend texnologiyalarini unordered list ko'rinishida yozing."
+            },
+            {
+                "title": "O'rganish rejasi",
+                "description": "HTML, CSS va JavaScriptni ordered list yordamida yozing."
+            },
+            {
+                "title": "Texnologiyalar",
+                "description": "Description List orqali HTML va CSS ga ta'rif yozing."
+            },
+            {
+                "title": "Nested List",
+                "description": "Frontend va Backend bo'limlarini ichma-ich ro'yxat ko'rinishida yarating."
+            },
+            {
+                "title": "Portfolio",
+                "description": "Portfolio sahifangizga Skills bo'limini list yordamida yarating."
+            }
+        ],
+        "quizQuestions": [
+            {
+                "question": "Tartibsiz ro'yxat uchun qaysi teg ishlatiladi?",
+                "options": [
+                    "<ul>",
+                    "<ol>",
+                    "<dl>",
+                    "<li>"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Tartibli ro'yxat uchun qaysi teg ishlatiladi?",
+                "options": [
+                    "<ol>",
+                    "<ul>",
+                    "<dl>",
+                    "<li>"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Ro'yxat elementi qaysi teg ichida yoziladi?",
+                "options": [
+                    "<li>",
+                    "<ul>",
+                    "<ol>",
+                    "<dt>"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Description List qaysi teg bilan boshlanadi?",
+                "options": [
+                    "<dl>",
+                    "<ul>",
+                    "<ol>",
+                    "<dt>"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Atama yozish uchun qaysi teg ishlatiladi?",
+                "options": [
+                    "<dt>",
+                    "<dd>",
+                    "<li>",
+                    "<dl>"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Izoh yozish uchun qaysi teg ishlatiladi?",
+                "options": [
+                    "<dd>",
+                    "<dt>",
+                    "<li>",
+                    "<dl>"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Ichma-ich ro'yxat yaratish mumkinmi?",
+                "options": [
+                    "Ha",
+                    "Yo'q",
+                    "Faqat CSS bilan",
+                    "Faqat JavaScript bilan"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Menyu yaratishda ko'pincha qaysi teg ishlatiladi?",
+                "options": [
+                    "<ul>",
+                    "<table>",
+                    "<form>",
+                    "<video>"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Portfolio'dagi Skills bo'limi uchun qaysi list mos?",
+                "options": [
+                    "<ul>",
+                    "<video>",
+                    "<iframe>",
+                    "<canvas>"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Ordered List elementlari odatda qanday chiqadi?",
+                "options": [
+                    "Raqamlangan",
+                    "Nuqtali",
+                    "Rangsiz",
+                    "Belgilanmagan"
+                ],
+                "answer": 0
+            }
+        ],
+        "homeworkTemplate": "Shaxsiy portfolio sahifangizga 'Skills', 'Hobbies' va 'Learning Roadmap' bo'limlarini yarating. Skills uchun unordered list, Learning Roadmap uchun ordered list va HTML, CSS, JavaScript haqida description list ishlating.",
+        "estimatedDuration": 90,
+        "difficulty": "BEGINNER",
+        "resources": [
+            {
+                "title": "MDN Lists",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul"
+            },
+            {
+                "title": "W3Schools HTML Lists",
+                "url": "https://www.w3schools.com/html/html_lists.asp"
+            },
+            {
+                "title": "HTML Living Standard",
+                "url": "https://html.spec.whatwg.org/"
+            }
+        ],
+        "tags": [
+            "html",
+            "lists",
+            "ul",
+            "ol",
+            "dl",
+            "li",
+            "beginner"
+        ],
+        "isPublished": true
+    },
+    {
+        "order": 8,
+        "title": "HTML Links (Havolalar)",
+        "slug": "html-links",
+        "topic": "HTML da havolalar (Links) yaratish",
+        "objective": "O'quvchi HTML da havolalar yaratish, ichki va tashqi sahifalarga o'tish, yangi oynada ochish, telefon, email va fayl havolalarini yaratishni o'rganadi.",
+        "theory": "HTML da havolalar (Links) web sahifalarni bir-biri bilan bog'lash uchun ishlatiladi. Havola yaratish uchun <a> (Anchor) tegi ishlatiladi. href atributi orqali qaysi manzilga o'tilishi belgilanadi. Havolalar ichki (bir xil loyiha ichidagi sahifalar), tashqi (boshqa web saytlar), email, telefon va fayl yuklab olish uchun ishlatilishi mumkin. target=\"_blank\" atributi havolani yangi oynada ochadi. Agar tashqi sayt yangi oynada ochilsa, rel=\"noopener noreferrer\" atributini qo'shish tavsiya etiladi. Havolalar SEO va foydalanuvchi tajribasi uchun juda muhim hisoblanadi. Navigatsiya menyulari, tugmalar va ko'plab elementlar aslida Anchor tegi yordamida yaratiladi.",
+        "courseTemplateId": 1,
+        "examples": [
+            {
+                "title": "Oddiy havola",
+                "description": "Boshqa saytga o'tish",
+                "code": "<a href=\"https://google.com\">Google</a>"
+            },
+            {
+                "title": "Ichki sahifa",
+                "description": "Loyiha ichidagi sahifaga o'tish",
+                "code": "<a href=\"about.html\">Biz haqimizda</a>"
+            },
+            {
+                "title": "Yangi oynada ochish",
+                "description": "target=\"_blank\" ishlatish",
+                "code": "<a href=\"https://github.com\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>"
+            },
+            {
+                "title": "Telefon qilish",
+                "description": "Telefon linki",
+                "code": "<a href=\"tel:+998901234567\">+998 90 123 45 67</a>"
+            },
+            {
+                "title": "Email yuborish",
+                "description": "Email linki",
+                "code": "<a href=\"mailto:ibrohim@example.com\">Email yuborish</a>"
+            },
+            {
+                "title": "Rasmga havola",
+                "description": "Rasmni bosganda boshqa sahifaga o'tish",
+                "code": "<a href=\"index.html\"><img src=\"logo.png\" alt=\"Logo\"></a>"
+            },
+            {
+                "title": "Navbar",
+                "description": "Navigatsiya menyusi",
+                "code": "<nav>\n  <a href=\"index.html\">Bosh sahifa</a>\n  <a href=\"about.html\">Men haqimda</a>\n  <a href=\"projects.html\">Loyihalar</a>\n  <a href=\"contact.html\">Bog'lanish</a>\n</nav>"
+            }
+        ],
+        "practiceTasks": [
+            {
+                "title": "Google",
+                "description": "Google saytiga o'tuvchi havola yarating."
+            },
+            {
+                "title": "Portfolio",
+                "description": "Portfolio uchun navbar yarating."
+            },
+            {
+                "title": "GitHub",
+                "description": "GitHub profilingizni yangi oynada oching."
+            },
+            {
+                "title": "Telefon",
+                "description": "Telefon raqamingiz uchun tel: link yarating."
+            },
+            {
+                "title": "Email",
+                "description": "Email yuborish uchun mailto: link yarating."
+            },
+            {
+                "title": "Logo",
+                "description": "Logo bosilganda bosh sahifaga o'tsin."
+            }
+        ],
+        "quizQuestions": [
+            {
+                "question": "Havola yaratish uchun qaysi teg ishlatiladi?",
+                "options": [
+                    "<a>",
+                    "<link>",
+                    "<href>",
+                    "<url>"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Havola manzili qaysi atributda yoziladi?",
+                "options": [
+                    "href",
+                    "src",
+                    "link",
+                    "target"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Havolani yangi oynada ochish uchun qaysi atribut ishlatiladi?",
+                "options": [
+                    "target=\"_blank\"",
+                    "new",
+                    "blank",
+                    "open"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Telefon havolasi qanday boshlanadi?",
+                "options": [
+                    "tel:",
+                    "phone:",
+                    "call:",
+                    "number:"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Email havolasi qanday boshlanadi?",
+                "options": [
+                    "mailto:",
+                    "email:",
+                    "mail:",
+                    "send:"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Tashqi saytni yangi oynada ochganda qaysi rel qiymati tavsiya etiladi?",
+                "options": [
+                    "noopener noreferrer",
+                    "external",
+                    "nofollow",
+                    "blank"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Navbar yaratishda odatda qaysi teg ishlatiladi?",
+                "options": [
+                    "<nav>",
+                    "<table>",
+                    "<header>",
+                    "<section>"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Logo bosilganda bosh sahifaga o'tishi uchun nima ishlatiladi?",
+                "options": [
+                    "<a> ichiga <img>",
+                    "<button>",
+                    "<div>",
+                    "<span>"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Ichki sahifa uchun qaysi href to'g'ri?",
+                "options": [
+                    "about.html",
+                    "https://about.html",
+                    "mailto:about",
+                    "tel:about"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Anchor tegining asosiy vazifasi nima?",
+                "options": [
+                    "Havola yaratish",
+                    "Rasm chiqarish",
+                    "Jadval yaratish",
+                    "Forma yaratish"
+                ],
+                "answer": 0
+            }
+        ],
+        "homeworkTemplate": "Portfolio saytingiz uchun to'liq navbar yarating. Unda Bosh sahifa, Men haqimda, Loyihalar va Bog'lanish sahifalari bo'lsin. GitHub profilingizni yangi oynada ochuvchi link, telefon va email linklarini ham qo'shing.",
+        "estimatedDuration": 120,
+        "difficulty": "BEGINNER",
+        "resources": [
+            {
+                "title": "MDN - Anchor Element",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a"
+            },
+            {
+                "title": "W3Schools HTML Links",
+                "url": "https://www.w3schools.com/html/html_links.asp"
+            },
+            {
+                "title": "HTML Living Standard",
+                "url": "https://html.spec.whatwg.org/"
+            }
+        ],
+        "tags": [
+            "html",
+            "links",
+            "anchor",
+            "href",
+            "target",
+            "mailto",
+            "tel",
+            "navigation"
+        ],
+        "isPublished": true
+    },
+    {
+        "order": 9,
+        "title": "HTML Images (Rasmlar)",
+        "slug": "html-images",
+        "topic": "HTML da rasmlar bilan ishlash",
+        "objective": "O'quvchi HTML da rasm qo'shish, src va alt atributlari, rasm o'lchamini boshqarish, ichki va tashqi rasmlar bilan ishlash hamda best practicelarni o'rganadi.",
+        "theory": "Rasmlar web sahifaning eng muhim elementlaridan biridir. HTML da rasm qo'shish uchun <img> tegi ishlatiladi. Bu teg yopilmaydigan (void element) hisoblanadi. Rasm manzili src atributida, rasm haqida qisqacha tavsif esa alt atributida yoziladi. Agar rasm yuklanmasa, alt matni foydalanuvchiga ko'rsatiladi va ekran o'quvchi dasturlar (Screen Reader) aynan shu matnni o'qiydi. Shu sababli alt atributini yozish Accessibility va SEO uchun juda muhim. Rasmlar lokal papkadan yoki internetdagi URL orqali yuklanishi mumkin. width va height atributlari rasm o'lchamini belgilaydi, lekin zamonaviy loyihalarda buni CSS orqali boshqarish tavsiya etiladi.",
+        "courseTemplateId": 1,
+        "examples": [
+            {
+                "title": "Oddiy rasm",
+                "description": "Lokal rasm qo'shish",
+                "code": "<img src=\"images/profile.jpg\" alt=\"Profil rasmi\">"
+            },
+            {
+                "title": "Internetdagi rasm",
+                "description": "URL orqali rasm",
+                "code": "<img src=\"https://picsum.photos/300\" alt=\"Tasodifiy rasm\">"
+            },
+            {
+                "title": "O'lcham berish",
+                "description": "Width va Height",
+                "code": "<img src=\"logo.png\" alt=\"Logo\" width=\"200\" height=\"200\">"
+            },
+            {
+                "title": "Rasmga havola",
+                "description": "Logo bosilganda bosh sahifaga o'tadi",
+                "code": "<a href=\"index.html\"><img src=\"logo.png\" alt=\"Logo\"></a>"
+            },
+            {
+                "title": "Portfolio rasmi",
+                "description": "Profil rasmi",
+                "code": "<img src=\"profile.jpg\" alt=\"Ibrohim Qosimov\" width=\"250\">"
+            },
+            {
+                "title": "Galereya",
+                "description": "Bir nechta rasm",
+                "code": "<img src=\"1.jpg\" alt=\"Rasm 1\">\n<img src=\"2.jpg\" alt=\"Rasm 2\">\n<img src=\"3.jpg\" alt=\"Rasm 3\">"
+            }
+        ],
+        "practiceTasks": [
+            {
+                "title": "Profil rasmi",
+                "description": "Portfolio sahifangizga profilingiz rasmini joylashtiring."
+            },
+            {
+                "title": "Logo",
+                "description": "Logo qo'shing va bosh sahifaga link qiling."
+            },
+            {
+                "title": "Internet rasmi",
+                "description": "Internetdan bitta rasm yuklang."
+            },
+            {
+                "title": "Alt atributi",
+                "description": "Har bir rasm uchun alt yozing."
+            },
+            {
+                "title": "Galereya",
+                "description": "Kamida 4 ta rasmdan iborat galereya yarating."
+            },
+            {
+                "title": "O'lcham",
+                "description": "Ikki xil o'lchamdagi rasmlar chiqaring."
+            }
+        ],
+        "quizQuestions": [
+            {
+                "question": "Rasm chiqarish uchun qaysi teg ishlatiladi?",
+                "options": [
+                    "<img>",
+                    "<image>",
+                    "<picture>",
+                    "<photo>"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Rasm manzili qaysi atributda yoziladi?",
+                "options": [
+                    "src",
+                    "href",
+                    "link",
+                    "path"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "alt atributining vazifasi nima?",
+                "options": [
+                    "Rasm haqida tavsif yozish",
+                    "Rasmni kattalashtirish",
+                    "Rasmni markazga olish",
+                    "Rasmni yuklash"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Agar rasm yuklanmasa nima ko'rinadi?",
+                "options": [
+                    "alt matni",
+                    "src",
+                    "title",
+                    "width"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "img qanday element hisoblanadi?",
+                "options": [
+                    "Void element",
+                    "Container element",
+                    "Semantic element",
+                    "Inline block"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Rasm kengligini qaysi atribut belgilaydi?",
+                "options": [
+                    "width",
+                    "size",
+                    "length",
+                    "scale"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Rasm balandligini qaysi atribut belgilaydi?",
+                "options": [
+                    "height",
+                    "size",
+                    "length",
+                    "scale"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "SEO uchun qaysi atribut muhim?",
+                "options": [
+                    "alt",
+                    "width",
+                    "height",
+                    "style"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Rasmni bosganda boshqa sahifaga o'tkazish uchun nima ishlatiladi?",
+                "options": [
+                    "<a> ichiga <img>",
+                    "<button>",
+                    "<div>",
+                    "<span>"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Zamonaviy loyihalarda rasm o'lchamini nima orqali boshqarish tavsiya etiladi?",
+                "options": [
+                    "CSS",
+                    "JavaScript",
+                    "SQL",
+                    "PHP"
+                ],
+                "answer": 0
+            }
+        ],
+        "homeworkTemplate": "Portfolio sahifangizni yarating. Profil rasmi, logo va kamida 4 ta rasmdan iborat galereya qo'shing. Har bir rasm uchun alt atributini yozing va logoni bosh sahifaga havola qiling.",
+        "estimatedDuration": 120,
+        "difficulty": "BEGINNER",
+        "resources": [
+            {
+                "title": "MDN Images",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img"
+            },
+            {
+                "title": "W3Schools HTML Images",
+                "url": "https://www.w3schools.com/html/html_images.asp"
+            },
+            {
+                "title": "HTML Living Standard",
+                "url": "https://html.spec.whatwg.org/"
+            }
+        ],
+        "tags": [
+            "html",
+            "images",
+            "img",
+            "src",
+            "alt",
+            "gallery",
+            "portfolio"
+        ],
+        "isPublished": true
+    },
+    {
+        "order": 10,
+        "title": "HTML File Paths (Fayl Yo'llari)",
+        "slug": "html-file-paths",
+        "topic": "Lokal va tashqi fayllarga yo'l berish",
+        "objective": "O'quvchi HTML da fayl yo'llari (File Paths), absolute va relative path, papkalar bilan ishlash hamda loyihani to'g'ri strukturalashni o'rganadi.",
+        "theory": "HTML loyihalarida rasm, CSS, JavaScript va boshqa fayllarni ulash uchun File Path (fayl yo'li) ishlatiladi. Fayl yo'li browserga kerakli fayl qayerda joylashganini ko'rsatadi. File Path ikki turga bo'linadi: Relative Path va Absolute Path. Relative Path loyiha ichidagi fayllarga murojaat qilish uchun ishlatiladi. Absolute Path esa internetdagi yoki serverdagi to'liq manzilni bildiradi. Katta loyihalarda doimo Relative Path ishlatish tavsiya etiladi. Chunki loyiha boshqa kompyuterga yoki serverga ko'chirilganda ham fayllar ishlashda davom etadi. Papka ichiga kirish uchun '/' belgisi ishlatiladi. Bir pog'ona yuqoriga chiqish uchun '../' yoziladi. Bir nechta pog'ona yuqoriga chiqish uchun '../../' yoki undan ko'p '../' ishlatiladi. Loyiha papkalarini images, css, js, assets kabi nomlash yaxshi amaliyot hisoblanadi.",
+        "courseTemplateId": 1,
+        "examples": [
+            {
+                "title": "Relative Path",
+                "description": "Loyiha ichidagi rasm",
+                "code": "<img src=\"images/profile.jpg\" alt=\"Profile\">"
+            },
+            {
+                "title": "CSS ulash",
+                "description": "css papkasidan ulash",
+                "code": "<link rel=\"stylesheet\" href=\"css/style.css\">"
+            },
+            {
+                "title": "JavaScript ulash",
+                "description": "js papkasidan ulash",
+                "code": "<script src=\"js/app.js\"></script>"
+            },
+            {
+                "title": "Bir papka yuqoriga chiqish",
+                "description": "../ ishlatish",
+                "code": "<img src=\"../images/logo.png\" alt=\"Logo\">"
+            },
+            {
+                "title": "Ikki papka yuqoriga chiqish",
+                "description": "../../ ishlatish",
+                "code": "<img src=\"../../assets/profile.png\" alt=\"Profile\">"
+            },
+            {
+                "title": "Absolute Path",
+                "description": "Internetdagi rasm",
+                "code": "<img src=\"https://picsum.photos/400\" alt=\"Random Image\">"
+            },
+            {
+                "title": "Professional loyiha strukturasi",
+                "description": "Papkalar",
+                "code": "project/\n│\n├── index.html\n├── about.html\n├── css/\n│   └── style.css\n├── js/\n│   └── app.js\n├── images/\n│   ├── logo.png\n│   └── profile.jpg\n└── assets/"
+            }
+        ],
+        "practiceTasks": [
+            {
+                "title": "Papkalar yarating",
+                "description": "css, js va images papkalarini yarating."
+            },
+            {
+                "title": "CSS ulang",
+                "description": "style.css faylini HTML ga ulang."
+            },
+            {
+                "title": "JavaScript ulang",
+                "description": "app.js faylini HTML ga ulang."
+            },
+            {
+                "title": "Rasm",
+                "description": "images papkasidan rasm chiqaring."
+            },
+            {
+                "title": "Yuqoriga chiqish",
+                "description": "../ yordamida rasm yuklang."
+            },
+            {
+                "title": "Portfolio",
+                "description": "Portfolio loyihasini professional papka strukturasida tashkil qiling."
+            }
+        ],
+        "quizQuestions": [
+            {
+                "question": "Relative Path nima?",
+                "options": [
+                    "Loyiha ichidagi fayl yo'li",
+                    "Internetdagi manzil",
+                    "Database manzili",
+                    "IP Address"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Absolute Path nima?",
+                "options": [
+                    "To'liq URL manzil",
+                    "Faqat papka nomi",
+                    "Kompyuter nomi",
+                    "JavaScript fayli"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Bir papka yuqoriga chiqish uchun nima yoziladi?",
+                "options": [
+                    "../",
+                    "./",
+                    "//",
+                    "/"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Ikki papka yuqoriga chiqish uchun nima yoziladi?",
+                "options": [
+                    "../../",
+                    "../",
+                    "./",
+                    "////"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "CSS fayli odatda qaysi papkada saqlanadi?",
+                "options": [
+                    "css",
+                    "images",
+                    "assets",
+                    "fonts"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "JavaScript fayllari odatda qaysi papkada bo'ladi?",
+                "options": [
+                    "js",
+                    "css",
+                    "images",
+                    "icons"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Rasmlar odatda qaysi papkada saqlanadi?",
+                "options": [
+                    "images",
+                    "css",
+                    "js",
+                    "dist"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Katta loyihalarda qaysi path tavsiya etiladi?",
+                "options": [
+                    "Relative Path",
+                    "Absolute Path",
+                    "IP Address",
+                    "FTP"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "https://picsum.photos/300 qanday path hisoblanadi?",
+                "options": [
+                    "Absolute Path",
+                    "Relative Path",
+                    "Local Path",
+                    "Folder Path"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Portfolio loyihasida rasmlar qaysi papkada saqlangani ma'qul?",
+                "options": [
+                    "images",
+                    "root",
+                    "css",
+                    "js"
+                ],
+                "answer": 0
+            }
+        ],
+        "homeworkTemplate": "Professional portfolio loyihasi papkalarini yarating. css, js va images papkalari bo'lsin. style.css va app.js fayllarini ulang. images papkasidan kamida 3 ta rasm chiqaring va bitta internetdagi rasmni Absolute Path orqali yuklang.",
+        "estimatedDuration": 120,
+        "difficulty": "BEGINNER",
+        "resources": [
+            {
+                "title": "MDN File Paths",
+                "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development"
+            },
+            {
+                "title": "W3Schools File Paths",
+                "url": "https://www.w3schools.com/html/html_filepaths.asp"
+            },
+            {
+                "title": "HTML Living Standard",
+                "url": "https://html.spec.whatwg.org/"
+            }
+        ],
+        "tags": [
+            "html",
+            "paths",
+            "relative-path",
+            "absolute-path",
+            "images",
+            "css",
+            "javascript",
+            "project-structure"
+        ],
+        "isPublished": true
+    },
+    {
+        "order": 11,
+        "title": "HTML Tables (Jadvallar)",
+        "slug": "html-tables",
+        "topic": "HTML da jadvallar bilan ishlash",
+        "objective": "O'quvchi HTML da jadval yaratish, qator va ustunlar bilan ishlash, sarlavha qatori, kataklarni birlashtirish hamda jadvallarni to'g'ri ishlatishni o'rganadi.",
+        "theory": "Jadval (Table) ma'lumotlarni qator (row) va ustunlar (column) ko'rinishida tartibli chiqarish uchun ishlatiladi. HTML da jadval <table> tegi bilan yaratiladi. Har bir qator <tr> (Table Row), ustun sarlavhasi <th> (Table Header), oddiy katak esa <td> (Table Data) tegi yordamida yoziladi. Jadvalning sarlavha qismi <thead>, asosiy ma'lumotlari <tbody>, pastki qismi esa <tfoot> ichida yozilishi tavsiya etiladi. Bir nechta ustunni birlashtirish uchun colspan, bir nechta qatorni birlashtirish uchun rowspan atributlari ishlatiladi. Zamonaviy web dasturlarda jadvallar foydalanuvchilar, mahsulotlar, buyurtmalar va hisobotlarni ko'rsatishda keng qo'llaniladi. Jadval faqat ma'lumotlarni chiqarish uchun ishlatiladi, sahifa dizaynini yaratish uchun emas.",
+        "courseTemplateId": 1,
+        "examples": [
+            {
+                "title": "Oddiy jadval",
+                "description": "2 ustunli jadval",
+                "code": "<table>\n  <tr>\n    <th>Ism</th>\n    <th>Yosh</th>\n  </tr>\n  <tr>\n    <td>Ali</td>\n    <td>20</td>\n  </tr>\n</table>"
+            },
+            {
+                "title": "thead va tbody",
+                "description": "Professional jadval",
+                "code": "<table>\n  <thead>\n    <tr>\n      <th>Ism</th>\n      <th>Kurs</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>Ali</td>\n      <td>HTML</td>\n    </tr>\n  </tbody>\n</table>"
+            },
+            {
+                "title": "colspan",
+                "description": "Ustunlarni birlashtirish",
+                "code": "<table>\n<tr>\n<td colspan=\"2\">Frontend Kursi</td>\n</tr>\n</table>"
+            },
+            {
+                "title": "rowspan",
+                "description": "Qatorlarni birlashtirish",
+                "code": "<table>\n<tr>\n<td rowspan=\"2\">Ali</td>\n<td>HTML</td>\n</tr>\n<tr>\n<td>CSS</td>\n</tr>\n</table>"
+            },
+            {
+                "title": "Student jadvali",
+                "description": "O'quvchilar ro'yxati",
+                "code": "<table>\n<thead>\n<tr>\n<th>#</th>\n<th>Ism</th>\n<th>Telefon</th>\n<th>Guruh</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>1</td>\n<td>Ali</td>\n<td>+998901112233</td>\n<td>HTML-01</td>\n</tr>\n</tbody>\n</table>"
+            },
+            {
+                "title": "Mahsulotlar",
+                "description": "Online do'kon jadvali",
+                "code": "<table>\n<tr>\n<th>Mahsulot</th>\n<th>Narx</th>\n<th>Soni</th>\n</tr>\n<tr>\n<td>Noutbuk</td>\n<td>8 000 000</td>\n<td>12</td>\n</tr>\n</table>"
+            }
+        ],
+        "practiceTasks": [
+            {
+                "title": "Oddiy jadval",
+                "description": "Ism va yoshdan iborat jadval yarating."
+            },
+            {
+                "title": "Studentlar",
+                "description": "Kamida 5 ta o'quvchidan iborat jadval tuzing."
+            },
+            {
+                "title": "Mahsulotlar",
+                "description": "3 ta mahsulotni jadval ko'rinishida chiqaring."
+            },
+            {
+                "title": "colspan",
+                "description": "Bitta katakni 2 ta ustunga birlashtiring."
+            },
+            {
+                "title": "rowspan",
+                "description": "Bitta katakni 2 ta qatorga birlashtiring."
+            },
+            {
+                "title": "Professional jadval",
+                "description": "thead va tbody ishlatilgan jadval yarating."
+            }
+        ],
+        "quizQuestions": [
+            {
+                "question": "Jadval yaratish uchun qaysi teg ishlatiladi?",
+                "options": [
+                    "<table>",
+                    "<tab>",
+                    "<tr>",
+                    "<grid>"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Qator qaysi teg bilan yaratiladi?",
+                "options": [
+                    "<tr>",
+                    "<td>",
+                    "<th>",
+                    "<row>"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Sarlavha katagi qaysi teg?",
+                "options": [
+                    "<th>",
+                    "<td>",
+                    "<tr>",
+                    "<thead>"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Oddiy katak qaysi teg?",
+                "options": [
+                    "<td>",
+                    "<th>",
+                    "<table>",
+                    "<cell>"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Jadval sarlavhasi qaysi bo'limda yoziladi?",
+                "options": [
+                    "<thead>",
+                    "<tbody>",
+                    "<tfoot>",
+                    "<head>"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Asosiy ma'lumotlar qaysi bo'limda yoziladi?",
+                "options": [
+                    "<tbody>",
+                    "<thead>",
+                    "<tfoot>",
+                    "<body>"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Ustunlarni birlashtirish uchun qaysi atribut ishlatiladi?",
+                "options": [
+                    "colspan",
+                    "rowspan",
+                    "merge",
+                    "span"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Qatorlarni birlashtirish uchun qaysi atribut ishlatiladi?",
+                "options": [
+                    "rowspan",
+                    "colspan",
+                    "merge",
+                    "rows"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Jadvaldan asosan nima uchun foydalaniladi?",
+                "options": [
+                    "Ma'lumotlarni tartibli ko'rsatish",
+                    "Sahifa dizaynini yaratish",
+                    "Video qo'shish",
+                    "Animatsiya qilish"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Zamonaviy web dasturlarda jadval ko'proq qayerda ishlatiladi?",
+                "options": [
+                    "Admin panellar va CRM tizimlarida",
+                    "Logo yaratishda",
+                    "Audio chiqarishda",
+                    "Font o'rnatishda"
+                ],
+                "answer": 0
+            }
+        ],
+        "homeworkTemplate": "Student Management jadvali yarating. Unda ID, Ism, Telefon, Guruh va Status ustunlari bo'lsin. Kamida 5 ta o'quvchi qo'shing. thead, tbody, colspan va rowspan atributlaridan kamida bittadan foydalaning.",
+        "estimatedDuration": 120,
+        "difficulty": "BEGINNER",
+        "resources": [
+            {
+                "title": "MDN HTML Tables",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table"
+            },
+            {
+                "title": "W3Schools HTML Tables",
+                "url": "https://www.w3schools.com/html/html_tables.asp"
+            },
+            {
+                "title": "HTML Living Standard",
+                "url": "https://html.spec.whatwg.org/"
+            }
+        ],
+        "tags": [
+            "html",
+            "table",
+            "tr",
+            "td",
+            "th",
+            "thead",
+            "tbody",
+            "colspan",
+            "rowspan"
+        ],
+        "isPublished": true
+    },
+    {
+        "order": 12,
+        "title": "HTML Forms (Formalar)",
+        "slug": "html-forms",
+        "topic": "HTML da formalar yaratish",
+        "objective": "O'quvchi HTML da forma (Form) yaratish, foydalanuvchidan ma'lumot olish, input turlari, label, textarea, select, button va form atributlarini o'rganadi.",
+        "theory": "HTML Form foydalanuvchidan ma'lumot qabul qilish uchun ishlatiladi. Login, ro'yxatdan o'tish, bog'lanish, buyurtma berish va qidiruv oynalari barchasi form orqali ishlaydi. Forma <form> tegi bilan yaratiladi. action atributi ma'lumot qayerga yuborilishini, method esa qanday usulda yuborilishini bildiradi. Eng ko'p ishlatiladigan methodlar GET va POST hisoblanadi. GET ma'lumotlarni URL orqali yuboradi, POST esa ma'lumotlarni yashirin tarzda request body ichida yuboradi. Input elementlari foydalanuvchi ma'lumotlarini kiritish uchun ishlatiladi. Har bir input uchun label yozish Accessibility va foydalanuvchi tajribasi uchun muhim hisoblanadi. HTML5 bilan birga email, password, number, date, tel, checkbox, radio, file, color va boshqa ko'plab input turlari qo'shilgan. required atributi maydonni majburiy qiladi. placeholder foydalanuvchiga namunaviy matn ko'rsatadi. Zamonaviy web ilovalarda barcha login va registratsiya sahifalari aynan Form yordamida ishlaydi.",
+        "courseTemplateId": 1,
+        "examples": [
+            {
+                "title": "Oddiy Form",
+                "description": "Minimal forma",
+                "code": "<form>\n  <input type=\"text\">\n</form>"
+            },
+            {
+                "title": "Login Form",
+                "description": "Email va Password",
+                "code": "<form>\n<label>Email</label>\n<input type=\"email\">\n<label>Password</label>\n<input type=\"password\">\n<button>Login</button>\n</form>"
+            },
+            {
+                "title": "Register Form",
+                "description": "Ro'yxatdan o'tish",
+                "code": "<form action=\"/register\" method=\"POST\">\n<label>Ism</label>\n<input type=\"text\" required>\n<label>Email</label>\n<input type=\"email\" required>\n<label>Password</label>\n<input type=\"password\" required>\n<button type=\"submit\">Ro'yxatdan o'tish</button>\n</form>"
+            },
+            {
+                "title": "Textarea",
+                "description": "Xabar yozish",
+                "code": "<label>Xabar</label>\n<textarea rows=\"5\" cols=\"30\"></textarea>"
+            },
+            {
+                "title": "Select",
+                "description": "Kurs tanlash",
+                "code": "<select>\n<option>HTML</option>\n<option>CSS</option>\n<option>JavaScript</option>\n</select>"
+            },
+            {
+                "title": "Checkbox",
+                "description": "Shartlarga rozilik",
+                "code": "<input type=\"checkbox\"> Shartlarga roziman"
+            },
+            {
+                "title": "Radio",
+                "description": "Jins tanlash",
+                "code": "<input type=\"radio\" name=\"gender\"> Erkak\n<input type=\"radio\" name=\"gender\"> Ayol"
+            },
+            {
+                "title": "Contact Form",
+                "description": "Bog'lanish sahifasi",
+                "code": "<form>\n<label>Ism</label>\n<input type=\"text\" placeholder=\"Ismingiz\">\n<label>Email</label>\n<input type=\"email\" placeholder=\"Email\">\n<label>Xabar</label>\n<textarea></textarea>\n<button type=\"submit\">Yuborish</button>\n</form>"
+            }
+        ],
+        "practiceTasks": [
+            {
+                "title": "Login",
+                "description": "Email va passworddan iborat login form yarating."
+            },
+            {
+                "title": "Register",
+                "description": "Ro'yxatdan o'tish formasini yarating."
+            },
+            {
+                "title": "Contact",
+                "description": "Bog'lanish formasini yarating."
+            },
+            {
+                "title": "Textarea",
+                "description": "Izoh yozish maydoni qo'shing."
+            },
+            {
+                "title": "Select",
+                "description": "Kurs tanlash uchun select yarating."
+            },
+            {
+                "title": "Checkbox",
+                "description": "Foydalanish shartlariga rozilik checkbox qo'shing."
+            },
+            {
+                "title": "Radio",
+                "description": "Jins tanlash radio buttonlarini yarating."
+            },
+            {
+                "title": "Required",
+                "description": "Majburiy maydonlar uchun required atributidan foydalaning."
+            }
+        ],
+        "quizQuestions": [
+            {
+                "question": "Forma yaratish uchun qaysi teg ishlatiladi?",
+                "options": [
+                    "<form>",
+                    "<input>",
+                    "<label>",
+                    "<fieldset>"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Ma'lumot yuboriladigan manzil qaysi atributda yoziladi?",
+                "options": [
+                    "action",
+                    "method",
+                    "target",
+                    "href"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Ma'lumot yuborish usuli qaysi atributda belgilanadi?",
+                "options": [
+                    "method",
+                    "action",
+                    "type",
+                    "src"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Parol uchun qaysi input turi ishlatiladi?",
+                "options": [
+                    "password",
+                    "text",
+                    "email",
+                    "hidden"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Email uchun qaysi input turi ishlatiladi?",
+                "options": [
+                    "email",
+                    "text",
+                    "mail",
+                    "password"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Ko'p qatorli matn yozish uchun qaysi teg ishlatiladi?",
+                "options": [
+                    "<textarea>",
+                    "<input>",
+                    "<p>",
+                    "<div>"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Tanlov ro'yxati uchun qaysi teg ishlatiladi?",
+                "options": [
+                    "<select>",
+                    "<option>",
+                    "<list>",
+                    "<input>"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Majburiy maydon qaysi atribut bilan belgilanadi?",
+                "options": [
+                    "required",
+                    "mandatory",
+                    "important",
+                    "need"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Foydalanuvchiga namunaviy matn ko'rsatish uchun qaysi atribut ishlatiladi?",
+                "options": [
+                    "placeholder",
+                    "value",
+                    "label",
+                    "name"
+                ],
+                "answer": 0
+            },
+            {
+                "question": "Ma'lumotni URL orqali yuboradigan method qaysi?",
+                "options": [
+                    "GET",
+                    "POST",
+                    "PUT",
+                    "DELETE"
+                ],
+                "answer": 0
+            }
+        ],
+        "homeworkTemplate": "Student Registration form yarating. Unda Full Name, Email, Phone, Password, Gender (radio), Course (select), About (textarea), Terms (checkbox) va Submit tugmasi bo'lsin. Barcha muhim maydonlarga required atributini qo'shing va formani method='POST' bilan yarating.",
+        "estimatedDuration": 180,
+        "difficulty": "BEGINNER",
+        "resources": [
+            {
+                "title": "MDN Forms",
+                "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms"
+            },
+            {
+                "title": "W3Schools HTML Forms",
+                "url": "https://www.w3schools.com/html/html_forms.asp"
+            },
+            {
+                "title": "HTML Living Standard",
+                "url": "https://html.spec.whatwg.org/"
+            }
+        ],
+        "tags": [
+            "html",
+            "forms",
+            "input",
+            "label",
+            "textarea",
+            "select",
+            "checkbox",
+            "radio",
+            "button",
+            "beginner"
+        ],
+        "isPublished": true
+    }
+]
