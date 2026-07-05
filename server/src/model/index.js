@@ -69,4 +69,24 @@ db.GroupLesson.belongsTo(db.Teacher, {
     as: "teacher",
 });
 
+db.Teacher.hasMany(db.Group, {
+    foreignKey: "teacherId",
+    as: "groups",
+});
+
+db.Group.belongsTo(db.Teacher, {
+    foreignKey: "teacherId",
+    as: "teacher",
+});
+
+db.CourseTemplate.hasMany(db.Group, {
+    foreignKey: "courseTemplateId",
+    as: "groups",
+});
+
+db.Group.belongsTo(db.CourseTemplate, {
+    foreignKey: "courseTemplateId",
+    as: "courseTemplate",
+});
+
 module.exports = db;

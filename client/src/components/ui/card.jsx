@@ -41,10 +41,7 @@ function CardTitle({
   return (
     <div
       data-slot="card-title"
-      className={cn(
-        "font-heading text-sm font-medium group-data-[size=sm]/card:text-sm",
-        className
-      )}
+      className={cn("text-sm font-medium group-data-[size=sm]/card:text-sm", className)}
       {...props} />
   );
 }

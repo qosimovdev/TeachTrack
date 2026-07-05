@@ -12,7 +12,7 @@ export const useRegister = () => {
         onSuccess: ({ token, user }) => {
             login({ token, user });
             toast.success(`Xush kelibsiz, ${user.fullName}`);
-            navigate("/dashboard", {
+            navigate("/teacher/dashboard", {
                 replace: true,
             });
         },

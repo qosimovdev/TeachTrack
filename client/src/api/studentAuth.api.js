@@ -1,6 +1,6 @@
 import api from "./axios";
 
-export const createAccount = async (data) => {
+export const createStudent = async (data) => {
     const res = await api.post("/student/register", data);
     return res.data;
 };

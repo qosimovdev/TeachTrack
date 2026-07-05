@@ -2,8 +2,8 @@ import { useEffect } from "react";
 import useAuthStore from "../../store/authStore";
 import { useMe } from "./useUser";
 
-export const useAuthInit = () => {
-    const { data, isLoading, isError } = useMe();
+export const useAuthInit = (role) => {
+    const { data, isLoading, isError } = useMe(role);
     const login = useAuthStore((s) => s.login);
     const setInitializing = useAuthStore((s) => s.setInitializing);
     useEffect(() => {
@@ -12,7 +12,7 @@ export const useAuthInit = () => {
             setInitializing(false);
             return;
         }
-        if (data) {
+        if (data && token) {
             login({
                 user: data,
                 token,
@@ -20,7 +20,8 @@ export const useAuthInit = () => {
             setInitializing(false);
         }
         if (!isLoading && isError) {
+            localStorage.removeItem("token");
             setInitializing(false);
         }
-    }, [data, isLoading, isError, login, setInitializing]);
+    }, [data, isLoading, isError, setInitializing]);
 };

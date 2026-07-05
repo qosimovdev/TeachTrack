@@ -3,8 +3,21 @@ import { Outlet } from "react-router-dom";
 import Sidebar from "@/components/layout/Sidebar";
 import Header from "@/components/layout/Header";
 import BottomNav from "@/components/layout/BottomNav";
+import AddGroupModal from "@/components/common/groups/CreateGroupModal";
+import useModalStore from "@/store/useModalStore";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 function PrivateLayout() {
+  const { modalType, closeModal, isOpen } = useModalStore();
+
+  const renderModal = () => {
+    switch (modalType) {
+      case "group":
+        return <AddGroupModal />;
+      default:
+        return null;
+    }
+  };
   return (
     <AuthProvider>
       <div className="flex h-screen overflow-hidden bg-blobs">
@@ -28,6 +41,10 @@ function PrivateLayout() {
           </div>
         </main>
       </div>
+
+      <Dialog open={isOpen} onOpenChange={closeModal}>
+        <DialogContent>{renderModal()}</DialogContent>
+      </Dialog>
     </AuthProvider>
   );
 }

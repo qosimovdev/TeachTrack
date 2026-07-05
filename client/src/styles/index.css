@@ -126,7 +126,7 @@
     font-family: "Satoshi", sans-serif;
   }
   html {
-    @apply font-mono;
+    scroll-behavior: smooth;
   }
 }
 .main {

@@ -10,9 +10,7 @@ exports.createGroup = async (req, res) => {
             days,
             startTime,
             endTime,
-            totalLessons,
             status,
-            teacherId,
         } = req.body;
         if (
             !name ||
@@ -20,24 +18,25 @@ exports.createGroup = async (req, res) => {
             !startDate ||
             !days ||
             !startTime ||
-            !endTime ||
-            !totalLessons ||
-            !teacherId
+            !endTime
         ) {
             return res.status(400).json({
                 message: "All required fields must be filled.",
             });
         }
-        const template = await CourseTemplate.findByPk(courseTemplateId);
-        if (!template) {
+        const existingGroup = await Group.findOne({
+            where: { name }
+        })
+        if (existingGroup) {
+            return res.status(400).json({
+                message: "Group name already existed!"
+            })
+        }
+        const teacherId = req.user?.id
+        const course = await CourseTemplate.findByPk(courseTemplateId);
+        if (!course) {
             return res.status(404).json({
                 message: "Course template not found.",
-            });
-        }
-        const teacher = await Teacher.findByPk(teacherId);
-        if (!teacher) {
-            return res.status(404).json({
-                message: "Teacher not found.",
             });
         }
         const group = await Group.create({
@@ -47,10 +46,11 @@ exports.createGroup = async (req, res) => {
             days,
             startTime,
             endTime,
-            totalLessons,
+            totalLessons: course.totalLessons,
             status,
             teacherId,
         });
+
         res.status(201).json({
             message: "Group created successfully.",
             data: group,
@@ -80,7 +80,10 @@ exports.getGroups = async (req, res) => {
             ],
             order: [["createdAt", "DESC"]],
         });
-        res.status(200).json(groups);
+        res.status(200).json({
+            success: true,
+            groups
+        });
     } catch (error) {
         res.status(500).json({
             message: error.message,

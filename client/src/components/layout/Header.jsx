@@ -10,7 +10,7 @@ function Header() {
         <Input
           type="text"
           placeholder="Search students, groups..."
-          className="h-12 app-glass app-border-soft rounded-2xl px-4 py-2 w-80 input-theme"
+          className="h-12 app-glass app-border-soft rounded-2xl px-4 py-2 min-w-20 w-96 input-theme"
         />
       </div>
       <div className="flex items-center gap-4">

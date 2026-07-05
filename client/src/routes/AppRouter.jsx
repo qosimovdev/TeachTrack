@@ -6,6 +6,7 @@ import ProtectedRoute from "./ProtectedRoute";
 import PrivateLayout from "@/layout/PrivateLayout";
 import Dashboard from "@/pages/teacher/dashboard/Dashboard";
 import StudentDashboard from "@/pages/student/dashboard/StudentDashboard";
+import Group from "@/pages/teacher/group/Group";
 
 function AppRouter() {
   return (
@@ -20,6 +21,7 @@ function AppRouter() {
             <Route element={<PrivateLayout />}>
               <Route path="/teacher/dashboard" element={<Dashboard />} />
               <Route path="/teacher/students" element={<div>Students</div>} />
+              <Route path="/teacher/groups" element={<Group />} />
             </Route>
           </Route>
 

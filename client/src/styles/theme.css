@@ -9,80 +9,84 @@
   --alerts: #ff453a;
 
   /* Light Background */
-  --app-bg-primary: #eef1f6;
-  --app-bg-blob-1: #d9e6ff;
-  --app-bg-blob-2: #e7dcfb;
-  --app-bg-blob-3: #d7f3ee;
+  --bg-base: #eef1f6;
+  --bg-blob-1: #d9e6ff;
+  --bg-blob-2: #e7dcfb;
+  --bg-blob-3: #d7f3ee;
 
-  /* Text */
-  --app-text-primary: #0c0c12;
-  --app-text-secondary: #55566b;
-  --app-text-muted: #9092a6;
+  /* Text (ink) */
+  --ink-1: #0c0c12;
+  --ink-2: #55566b;
+  --ink-3: #9092a6;
 
   /* Glass */
-  --app-glass: rgba(255, 255, 255, 0.55);
-  --app-glass-strong: rgba(255, 255, 255, 0.74);
+  --glass-fill: rgba(255, 255, 255, 0.42);
+  --glass-fill-strong: rgba(255, 255, 255, 0.55);
 
-  --app-border-strong: rgba(255, 255, 255, 0.85);
-  --app-border-soft: rgba(255, 255, 255, 0.4);
-  --app-border-line: rgba(120, 120, 150, 0.14);
-  /* Shadow */
-  --app-shadow-soft:
-    0 1px 1px rgba(20, 20, 40, 0.03), 0 8px 24px -8px rgba(30, 30, 70, 0.14),
-    0 24px 48px -24px rgba(30, 30, 70, 0.16);
+  --glass-edge-soft: rgba(255, 255, 255, 0.12);
+  --glass-edge: rgba(255, 255, 255, 0.18);
+  --hairline: rgba(255, 255, 255, 0.08);
 
-  --app-shadow-lift:
-    0 2px 2px rgba(20, 20, 40, 0.04), 0 16px 32px -12px rgba(30, 30, 70, 0.22),
-    0 32px 64px -28px rgba(30, 30, 70, 0.26);
+  --shadow-lift:
+    0 8px 32px rgba(30, 35, 90, 0.1), 0 24px 60px rgba(0, 0, 0, 0.08);
+
+  --shadow-soft: 0 6px 20px rgba(0, 0, 0, 0.05);
 }
 
 .dark {
-  --app-bg-primary: #06060b;
-  --app-bg-blob-1: #101c36;
-  --app-bg-blob-2: #1a1230;
-  --app-bg-blob-3: #0e1f22;
+  --bg-base: #070910;
+  --bg-blob-1: #101c36;
+  --bg-blob-2: #1a1230;
+  --bg-blob-3: #0e1f22;
 
-  --app-text-primary: #f5f5fa;
-  --app-text-secondary: #a9aabc;
-  --app-text-muted: #6e6f82;
+  --ink-1: #f5f5fa;
+  --ink-2: #a9aabc;
+  --ink-3: #6e6f82;
 
-  --app-glass: rgba(40, 40, 54, 0.46);
-  --app-glass-strong: rgba(48, 48, 64, 0.66);
+  --glass-fill: rgba(40, 40, 54, 0.46);
+  --glass-fill-strong: rgba(48, 48, 64, 0.6);
 
-  --app-border-strong: rgba(255, 255, 255, 0.14);
-  --app-border-soft: rgba(255, 255, 255, 0.07);
-  --app-border-line: rgba(255, 255, 255, 0.08);
+  --glass-edge-soft: rgba(255, 255, 255, 0.07);
+  --glass-edge: rgba(255, 255, 255, 0.14);
+  --hairline: rgba(255, 255, 255, 0.08);
 
-  --app-shadow-soft:
-    0 1px 1px rgba(0, 0, 0, 0.3), 0 8px 24px -8px rgba(0, 0, 0, 0.5);
+  --shadow-soft:
+    0 1px 1px rgba(0, 0, 0, 0.3), 0 8px 24px -8px rgba(0, 0, 0, 0.5),
+    0 24px 48px -24px rgba(0, 0, 0, 0.55);
 
-  --app-shadow-lift:
-    0 2px 2px rgba(0, 0, 0, 0.4), 0 16px 32px -12px rgba(0, 0, 0, 0.6);
+  --shadow-lift:
+    0 2px 2px rgba(0, 0, 0, 0.4), 0 16px 32px -12px rgba(0, 0, 0, 0.6),
+    0 32px 64px -28px rgba(0, 0, 0, 0.65);
 }
+
 .app-link {
-  background: linear-gradient(135deg, rgba(10,132,255,.16), rgba(94,92,230,.12));
-  color: #0A84FF
+  background: linear-gradient(
+    135deg,
+    rgba(10, 132, 255, 0.16),
+    rgba(94, 92, 230, 0.12)
+  );
+  color: #0a84ff;
 }
 .app-theme {
-  background-color: var(--app-bg-primary);
+  background-color: var(--bg-base);
 }
 .app-border-line {
-  border: 1px solid var(--app-border-line);
+  border: 1px solid var(--hairline);
 }
 .app-border-soft {
-  border: 1px solid var(--app-border-soft);
+  border: 1px solid var(--glass-edge-soft);
 }
 .app-border-strong {
-  border: 1px solid var(--app-border-strong);
+  border: 1px solid var(--glass-edge);
 }
 .app-text-primary {
-  color: var(--app-text-primary);
+  color: var(--ink-1);
 }
 .app-text-secondary {
-  color: var(--app-text-secondary);
+  color: var(--ink-2);
 }
 .app-text-muted {
-  color: var(--app-text-muted);
+  color: var(--ink-3);
 }
 
 .dashboard {
@@ -124,37 +128,169 @@
 .alerts-text {
   color: var(--alerts);
 }
-.input-theme:focus {
-  border: 1px solid var(--dashboard);
+
+.input-theme {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(16px);
 }
+.input-theme:focus {
+  border-color: #0a84ff;
+  box-shadow: 0 0 0 3px rgba(10, 132, 255, 0.18);
+}
+
 .app-glass {
-  background: var(--app-glass);
-  backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid var(--app-border-soft);
-  box-shadow: var(--app-shadow-soft);
+  overflow: hidden;
+  isolation: isolate;
+
+  background: var(--glass-fill);
+  border: 1px solid var(--glass-edge-soft);
+
+  backdrop-filter: blur(34px) saturate(180%);
+  -webkit-backdrop-filter: blur(34px) saturate(180%);
+
+  box-shadow: var(--shadow-lift);
+}
+.app-glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.12),
+    rgba(255, 255, 255, 0.03) 35%,
+    transparent 100%
+  );
+
+  pointer-events: none;
+}
+.app-glass::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+
+  box-shadow:
+    inset 0 1px var(--hairline),
+    inset 0 -1px rgba(0, 0, 0, 0.15);
 }
 
 .app-glass-medium {
-  background: var(--app-glass);
+  background: var(--glass-fill);
   backdrop-filter: blur(26px) saturate(180%);
-  border: 1px solid var(--app-border-soft);
+  border: 1px solid var(--glass-edge-soft);
 }
 
 .app-glass-strong {
-  background: var(--app-glass-strong);
+  background: var(--glass-fill-strong);
   backdrop-filter: blur(34px) saturate(180%);
-  border: 1px solid var(--app-border-strong);
-  box-shadow: var(--app-shadow-lift);
+  border: 1px solid var(--glass-edge);
+  box-shadow: var(--shadow-lift);
+}
+
+/* Modal (skrinshotdagi "Create Group" oynasi) */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 50;
+}
+.modal-overlay.open {
+  display: flex;
+}
+
+/* ============ iOS 26 "Liquid Glass" ============ */
+.modal.glass {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  border-radius: 28px;
+  color: var(--ink-1);
+
+  /* asosiy shisha qatlami: kuchli blur + saturate va ozgina rang aralashmasi */
+  background:
+    linear-gradient(
+      165deg,
+      rgba(255, 255, 255, 0.14),
+      rgba(255, 255, 255, 0.03) 40%,
+      rgba(255, 255, 255, 0.05) 100%
+    ),
+    var(--glass-fill);
+
+  backdrop-filter: blur(40px) saturate(200%) brightness(1.05);
+  -webkit-backdrop-filter: blur(40px) saturate(200%) brightness(1.05);
+
+  border: 1px solid var(--glass-edge);
+
+  /* tashqi soya = chuqurlik, ichki soya = shisha qalinligi hissi */
+  box-shadow:
+    var(--shadow-lift),
+    inset 0 1px 1px rgba(255, 255, 255, 0.35),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.15),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+
+/* tepadagi "specular highlight" — oynaga tushgan yorug' nur chizig'i */
+.modal.glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 1;
+
+  background: radial-gradient(
+    120% 60% at 50% -10%,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.08) 45%,
+    transparent 70%
+  );
+  mix-blend-mode: overlay;
+}
+
+/* pastki qismda yengil qorong'ilashish — hajm/chuqurlik hissi */
+.modal.glass::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 1;
+
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.12), transparent 30%);
+}
+
+/* modal ichidagi kontent shisha qatlamlaridan tepada tursin */
+.modal.glass > * {
+  position: relative;
+  z-index: 2;
 }
 
 .bg-blobs {
   background:
-    radial-gradient(circle at top left, var(--app-bg-blob-1), transparent 35%),
-    radial-gradient(circle at top right, var(--app-bg-blob-2), transparent 35%),
     radial-gradient(
-      circle at bottom left,
-      var(--app-bg-blob-3),
-      transparent 35%
+      circle at top left,
+      rgba(10, 132, 255, 0.22),
+      transparent 42%
     ),
-    var(--app-bg-primary);
+    radial-gradient(
+      circle at top right,
+      rgba(191, 90, 242, 0.2),
+      transparent 42%
+    ),
+    radial-gradient(
+        circle at bottom left,
+        rgba(48, 209, 88, 0.18),
+        transparent 42%
+      )
+      var(--bg-base);
 }
